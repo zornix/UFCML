@@ -1,0 +1,111 @@
+{
+  "model_features": [
+    "d_n_fights",
+    "d_win_rate",
+    "d_streak",
+    "d_recent3_win_rate",
+    "d_slpm",
+    "d_str_acc",
+    "d_sapm",
+    "d_str_def",
+    "d_td_per15",
+    "d_td_acc",
+    "d_td_def",
+    "d_opp_td_per15",
+    "d_sub_per15",
+    "d_kd_per15",
+    "d_kd_abs_per15",
+    "d_ctrl_pct",
+    "d_ko_win_pct",
+    "d_sub_win_pct",
+    "d_dec_win_pct",
+    "d_ko_loss_pct",
+    "d_sub_loss_pct",
+    "d_avg_fight_min",
+    "d_layoff_days",
+    "d_age",
+    "d_elo",
+    "d_opp_elo_avg",
+    "d_elo_change3",
+    "d_height_cm",
+    "d_reach_cm",
+    "d_weight_kg",
+    "d_southpaw",
+    "mean_weight_kg",
+    "total_fights",
+    "mean_age",
+    "open_stance",
+    "d_age_x_wc",
+    "d_age_sq"
+  ],
+  "n_input_features": 40,
+  "missing_indicators": [
+    "d_td_acc_missing",
+    "d_td_def_missing",
+    "d_reach_cm_missing"
+  ],
+  "architecture": {
+    "hidden": [
+      256,
+      128
+    ],
+    "dropout": 0.3,
+    "norm": "batch"
+  },
+  "training_config": {
+    "lr": 0.0003,
+    "weight_decay": 0.001,
+    "batch_size": 128,
+    "max_epochs": 300,
+    "patience": 30,
+    "best_epoch": 5
+  },
+  "holdout_cutoff": "2024-03-09",
+  "holdout_metrics": {
+    "xgb_saved_baseline": {
+      "accuracy": 0.6463917525773196,
+      "roc_auc": 0.7029920255183413,
+      "log_loss": 0.6342692971229553,
+      "brier": 0.22165337204933167,
+      "n_test": 970
+    },
+    "xgb_train_only": {
+      "accuracy": 0.6463917525773196,
+      "roc_auc": 0.7029920255183413,
+      "log_loss": 0.6342692971229553,
+      "brier": 0.22165337204933167,
+      "n_test": 970
+    },
+    "mlp": {
+      "accuracy": 0.643298969072165,
+      "roc_auc": 0.6961828814460393,
+      "log_loss": 0.6365731358528137,
+      "brier": 0.22279374301433563,
+      "n_test": 970
+    },
+    "mlp_sym": {
+      "accuracy": 0.6463917525773196,
+      "roc_auc": 0.7047995746943115,
+      "log_loss": 0.6314976215362549,
+      "brier": 0.22050662338733673,
+      "n_test": 970
+    },
+    "blend_mlp_xgb": {
+      "accuracy": 0.6515463917525773,
+      "roc_auc": 0.7047102604997342,
+      "log_loss": 0.6328884363174438,
+      "brier": 0.2210722714662552,
+      "n_test": 970
+    },
+    "blend_sym_mlp_xgb": {
+      "accuracy": 0.6525773195876289,
+      "roc_auc": 0.7100648591174907,
+      "log_loss": 0.6308758854866028,
+      "brier": 0.2200932502746582,
+      "n_test": 970
+    }
+  },
+  "n_train": 4605,
+  "n_val": 825,
+  "n_test": 970
+}

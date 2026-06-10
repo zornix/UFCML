@@ -1,0 +1,222 @@
+{
+  "model_features": [
+    "d_n_fights",
+    "d_win_rate",
+    "d_streak",
+    "d_recent3_win_rate",
+    "d_slpm",
+    "d_str_acc",
+    "d_sapm",
+    "d_str_def",
+    "d_td_per15",
+    "d_td_acc",
+    "d_td_def",
+    "d_opp_td_per15",
+    "d_sub_per15",
+    "d_kd_per15",
+    "d_kd_abs_per15",
+    "d_ctrl_pct",
+    "d_ko_win_pct",
+    "d_sub_win_pct",
+    "d_dec_win_pct",
+    "d_ko_loss_pct",
+    "d_sub_loss_pct",
+    "d_avg_fight_min",
+    "d_layoff_days",
+    "d_age",
+    "d_elo",
+    "d_opp_elo_avg",
+    "d_elo_change3",
+    "d_height_cm",
+    "d_reach_cm",
+    "d_weight_kg",
+    "d_southpaw",
+    "mean_weight_kg",
+    "total_fights",
+    "mean_age",
+    "open_stance",
+    "d_age_x_wc",
+    "d_age_sq"
+  ],
+  "fighter_features": [
+    "n_fights",
+    "win_rate",
+    "streak",
+    "recent3_win_rate",
+    "slpm",
+    "str_acc",
+    "sapm",
+    "str_def",
+    "td_per15",
+    "td_acc",
+    "td_def",
+    "opp_td_per15",
+    "sub_per15",
+    "kd_per15",
+    "kd_abs_per15",
+    "ctrl_pct",
+    "ko_win_pct",
+    "sub_win_pct",
+    "dec_win_pct",
+    "ko_loss_pct",
+    "sub_loss_pct",
+    "avg_fight_min",
+    "layoff_days",
+    "age",
+    "elo",
+    "opp_elo_avg",
+    "elo_change3",
+    "height_cm",
+    "reach_cm",
+    "weight_kg",
+    "southpaw"
+  ],
+  "best_params": {
+    "colsample_bytree": 0.8075036133495849,
+    "gamma": 1.854374542510013,
+    "learning_rate": 0.008051764808474445,
+    "max_depth": 4.0,
+    "min_child_weight": 10.0,
+    "n_estimators": 535.0,
+    "reg_alpha": 0.015599317652259954,
+    "reg_lambda": 8.970458772060821,
+    "subsample": 0.6546485325768115
+  },
+  "cv_log_loss": 0.6639851689338684,
+  "holdout_metrics": {
+    "accuracy": 0.6463917525773196,
+    "roc_auc": 0.7029920255183413,
+    "log_loss": 0.6342692971229553,
+    "brier": 0.22165337204933167,
+    "n_test": 970,
+    "selective": [
+      {
+        "threshold": 0.55,
+        "n_called": 720,
+        "coverage": 0.7422680412371134,
+        "precision": 0.6875,
+        "correct_picks": 495,
+        "false_positives": 225,
+        "abstentions": 250
+      },
+      {
+        "threshold": 0.6,
+        "n_called": 470,
+        "coverage": 0.4845360824742268,
+        "precision": 0.723404255319149,
+        "correct_picks": 340,
+        "false_positives": 130,
+        "abstentions": 500
+      },
+      {
+        "threshold": 0.65,
+        "n_called": 257,
+        "coverage": 0.2649484536082474,
+        "precision": 0.7782101167315175,
+        "correct_picks": 200,
+        "false_positives": 57,
+        "abstentions": 713
+      },
+      {
+        "threshold": 0.7,
+        "n_called": 96,
+        "coverage": 0.09896907216494845,
+        "precision": 0.8229166666666666,
+        "correct_picks": 79,
+        "false_positives": 17,
+        "abstentions": 874
+      },
+      {
+        "threshold": 0.75,
+        "n_called": 22,
+        "coverage": 0.02268041237113402,
+        "precision": 0.9090909090909091,
+        "correct_picks": 20,
+        "false_positives": 2,
+        "abstentions": 948
+      }
+    ],
+    "reliability": {
+      "ece": 0.04223210111106795,
+      "bins": [
+        {
+          "bin_left": 0.5,
+          "bin_right": 0.55,
+          "count": 250,
+          "avg_confidence": 0.5242925882339478,
+          "accuracy": 0.528
+        },
+        {
+          "bin_left": 0.55,
+          "bin_right": 0.6,
+          "count": 250,
+          "avg_confidence": 0.5734067559242249,
+          "accuracy": 0.62
+        },
+        {
+          "bin_left": 0.6,
+          "bin_right": 0.65,
+          "count": 213,
+          "avg_confidence": 0.6233216524124146,
+          "accuracy": 0.6572769953051644
+        },
+        {
+          "bin_left": 0.65,
+          "bin_right": 0.7,
+          "count": 161,
+          "avg_confidence": 0.6730412244796753,
+          "accuracy": 0.7515527950310559
+        },
+        {
+          "bin_left": 0.7,
+          "bin_right": 0.75,
+          "count": 74,
+          "avg_confidence": 0.7232705354690552,
+          "accuracy": 0.7972972972972973
+        },
+        {
+          "bin_left": 0.75,
+          "bin_right": 0.8,
+          "count": 22,
+          "avg_confidence": 0.770948052406311,
+          "accuracy": 0.9090909090909091
+        },
+        {
+          "bin_left": 0.8,
+          "bin_right": 0.8500000000000001,
+          "count": 0,
+          "avg_confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin_left": 0.8500000000000001,
+          "bin_right": 0.9,
+          "count": 0,
+          "avg_confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin_left": 0.9,
+          "bin_right": 0.95,
+          "count": 0,
+          "avg_confidence": null,
+          "accuracy": null
+        },
+        {
+          "bin_left": 0.95,
+          "bin_right": 1.0,
+          "count": 0,
+          "avg_confidence": null,
+          "accuracy": null
+        }
+      ]
+    }
+  },
+  "holdout_baseline": {
+    "accuracy": 0.6030927835051546
+  },
+  "holdout_cutoff": "2024-03-09",
+  "holdout_wrong_pick_audit": "holdout_high_conf_wrong_picks.csv",
+  "n_train_fights": 6400,
+  "data_max_date": "2026-06-06"
+}
